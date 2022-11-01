@@ -82,5 +82,5 @@ if __name__ == "__main__":
 
     bot = MyBot(command_prefix=commands.when_mentioned_or("/"))
 
-    # use_sentry(bot, dsn=dsn, integrations=[AioHttpIntegration(), sentry_logging])
-    bot.run(token)
+    use_sentry(bot, dsn=dsn, integrations=[AioHttpIntegration(), sentry_logging])
+    bot.run(token, log_handler=handler)
