@@ -30,7 +30,7 @@ RUN apk update && \
     apk add postgresql-dev gcc python3-dev build-base musl-dev libpq g++ git
 
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
-    pip install --upgrade pip  setuptools wheel greenlet && \
+    pip install --upgrade pip  setuptools wheel greenlet cmake && \
     pip install -r requirements.txt && \
     pip install -U git+https://github.com/Rapptz/discord.py && \
     pip install ./iachara
