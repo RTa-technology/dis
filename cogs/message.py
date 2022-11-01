@@ -13,8 +13,7 @@ class ch(commands.Cog):
         guild = ctx.guild
         category = guild.get_channel(int(category_id))
         ch = await guild.create_text_channel(ch_name, category=category)
-        await message.channel.send(f"{ch.mention} を作成しました。")
-
+        await ctx.reply(f"{ch.mention}を作成しました。")
 
 async def setup(bot):
     await bot.add_cog(ch(bot))
