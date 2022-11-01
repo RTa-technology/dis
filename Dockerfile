@@ -49,4 +49,4 @@ RUN chown -R bot:bot $BOT_HOME
 USER bot
 
 # run entrypoint shell file
-ENTRYPOINT ["/usr/src/dis/bot.sh"]
+CMD ["python3","/usr/src/dis/main.py"]
