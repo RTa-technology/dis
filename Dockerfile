@@ -13,7 +13,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 
 # create Django directory for the app user
-ENV BOT_HOME=/usr/src/bot
+ENV BOT_HOME=/usr/src/dis
 RUN mkdir -p $BOT_HOME
 
 # create the app user
@@ -49,4 +49,4 @@ RUN chown -R bot:bot $BOT_HOME
 USER bot
 
 # run entrypoint shell file
-ENTRYPOINT ["/usr/src/bot/bot.sh"]
+ENTRYPOINT ["/usr/src/dis/bot.sh"]
