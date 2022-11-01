@@ -19,6 +19,7 @@ lib64/
 parts/
 sdist/
 var/
+*.db
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
@@ -103,12 +104,14 @@ celerybeat.pid
 
 # Environments
 .env
+.env.sample
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+test/
 
 # Spyder project settings
 .spyderproject
@@ -127,3 +130,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+.vscode
+*.log
+*.csv
+*.ini
+token
+satsuki
+.VSCodeCounter
+*.bak
+*.sqlite3
+
+chatbot-data.json
