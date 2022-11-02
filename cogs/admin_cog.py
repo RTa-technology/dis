@@ -12,6 +12,9 @@ from discord.ext import commands, tasks
 from .utils.common import CommonUtil
 
 
+ret = {}
+
+
 class Admin(commands.Cog, name="管理用コマンド群"):
     """
     管理用のコマンドです
@@ -55,7 +58,7 @@ class Admin(commands.Cog, name="管理用コマンド群"):
         await ctx.reply(f"{' '.join(reloaded_list)}をreloadしました", mention_author=False)
 
     @commands.command(aliases=["st"], hidden=True)
-    async def status(self, ctx, word: str = "Thread管理中"):
+    async def status(self, ctx, word: str = "全権管理"):
         try:
             await self.bot.change_presence(activity=discord.Game(name=word))
             await ctx.reply(f"ステータスを{word}に変更しました", mention_author=False)
